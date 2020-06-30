@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wsearch"
+    }
+  },
+  "defaultProject": "wsearch",
+  "cli": {
+    "analytics": false
+  }
 }
