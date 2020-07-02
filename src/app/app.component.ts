@@ -9,14 +9,16 @@ import { WikipediaService } from './wikipedia.service';
 
 export class AppComponent {
 
+  pages=[];
+
   // wikipedia will added as private property automatically to the instance of the App component
   // wikipedia will be of type instance of wikipedia service
   constructor(private wikipedia:WikipediaService) {}
    
   onTerm(term:string){
     // response received from wikipedia search engine
-    this.wikipedia.search(term).subscribe((response)=>{
-      console.log(response); 
+    this.wikipedia.search(term).subscribe((response: any)=>{
+      this.pages=response.query.search;
     })
   }
 }

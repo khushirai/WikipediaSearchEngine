@@ -1,2 +1,5 @@
+<div class="container">
+<h1>Wikipedia Search Engine</h1>
 <app-search-bar (submitted)="onTerm($event)" ></app-search-bar>
-<app-page-list></app-page-list>
+<app-page-list *ngIf="pages.length>0" [pages]="pages"></app-page-list>
+</div>
