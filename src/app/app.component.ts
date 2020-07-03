@@ -17,10 +17,11 @@ export class AppComponent {
    
   onTerm(term:string){
     // response received from wikipedia search engine
-    this.wikipedia.search(term).subscribe((response: any)=>{
-      this.pages=response.query.search;
-    })
+    // retreives an observable
+    this.wikipedia.search(term).subscribe(pages=>{
+      this.pages=pages;
+    });
   }
-}
+} 
 
 
